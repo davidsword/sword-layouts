@@ -1,3 +1,9 @@
+.DS_Store
+.gitignore
+.eslintrc.json
+.eslintignore
+.editorconfig
+
 # Logs
 logs
 *.log
@@ -56,4 +62,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
