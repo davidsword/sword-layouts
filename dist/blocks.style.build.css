@@ -1,0 +1,40 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-cgb-block-sandbox-layouts {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .wp-block-cgb-block-sandbox-layouts > div {
+    padding: 20px; }
+  .wp-block-cgb-block-sandbox-layouts > div.imageBox {
+    background-color: #eee;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    position: relative; }
+    .wp-block-cgb-block-sandbox-layouts > div.imageBox * {
+      z-index: 2; }
+  .wp-block-cgb-block-sandbox-layouts > div.textBox {
+    padding: 50px 0; }
+    .wp-block-cgb-block-sandbox-layouts > div.textBox .textBoxContent {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto; }
+  .wp-block-cgb-block-sandbox-layouts[data-invert=true] > div.imageBox {
+    grid-column-start: 2;
+    grid-row-start: 1; }
+  .wp-block-cgb-block-sandbox-layouts[data-invert=true] > div.textBox {
+    grid-column-start: 1;
+    grid-row-start: 1; }

@@ -1,0 +1,54 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-block-sandbox-layouts {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-gap: 0;
+	box-sizing: border-box;;
+	> div {
+		padding: 20px;
+	}
+	> div.imageBox {
+		background-color: #eee;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+		position: relative;
+		* { z-index: 2;}
+		// .is-selected &:before {
+		// 	content: "";
+		// 	display: block;
+		// 	position: absolute;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	left:0;
+		// 	top:0;
+		// 	background: rgba(0,0,0,0.3);
+		// 	z-index:1;
+		// }
+	}
+	> div.textBox {
+		padding: 50px 0;
+		.textBoxContent {
+			max-width: 200px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	// the ol switcher'o
+	&[data-invert=true] {
+		> div.imageBox {
+			grid-column-start: 2;
+			grid-row-start: 1;
+		}
+		> div.textBox {
+			grid-column-start: 1;
+			grid-row-start: 1;
+		}
+	}
+}
