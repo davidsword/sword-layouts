@@ -62,6 +62,10 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 			default: false,
 		},
 	},
+	getEditWrapperProps( attributes ) {
+            // via https://github.com/WordPress/gutenberg/issues/4010
+    		return { 'data-align': 'wide' };
+    },
 	// Edit --------------------------------
 	edit( { attributes, setAttributes, className, focus } ) {
 		const onChangeContent = value => {
@@ -106,7 +110,11 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 					</PanelBody>
 				</InspectorControls>
 			), (
-				<div className={ className } data-invert={ attributes.invert ? "true" : "false" }>
+				<div
+					className={ className }
+					data-invert={ attributes.invert ? "true" : "false" }
+					data-align="full"
+				>
 					<div
 						className="imageBox"
 						style={ { backgroundImage: 'url(' + attributes.imgURL + ')' } }
