@@ -5,22 +5,21 @@
  *
  */
 
+/* eslint-disable react/jsx-key */
+
 //import classnames from 'classnames';
 import './style.scss';
 import './editor.scss';
 const { __ } = wp.i18n; // Import __() from wp.i18n
-/**
- * Internal block libraries
- AlignmentToolbar,
- BlockControls,
- BlockAlignmentToolbar,
- */
 const {
 	registerBlockType,
 	Editable,
 	MediaUpload,
 	InspectorControls,
 	BlockDescription,
+	//AlignmentToolbar,
+	//BlockControls,
+	//BlockAlignmentToolbar
 } = wp.blocks;
 const {
 	Button,
@@ -60,12 +59,14 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 		invert: {
 			type: 'boolean',
 			default: false,
-		},
+		}
 	},
+
+	// 🔥 not working
 	getEditWrapperProps( attributes ) {
-            // via https://github.com/WordPress/gutenberg/issues/4010
-    		return { 'data-align': 'wide' };
-    },
+		return { 'data-align': 'full' };
+	},
+
 	// Edit --------------------------------
 	edit( { attributes, setAttributes, className, focus } ) {
 		const onChangeContent = value => {
@@ -112,7 +113,7 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 			), (
 				<div
 					className={ className }
-					data-invert={ attributes.invert ? "true" : "false" }
+					data-invert={ attributes.invert ? 'true' : 'false' }
 					data-align="full"
 				>
 					<div
@@ -156,7 +157,7 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 						/>
 					</div>
 				</div>
-			)
+			),
 		];
 	},
 	// Save --------------------------------
