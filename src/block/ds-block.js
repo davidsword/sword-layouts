@@ -116,6 +116,7 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 						style={ { backgroundImage: 'url(' + attributes.imgURL + ')' } }
 						data-imgurl={ attributes.imgURL }
 						data-imgid={ attributes.imgID }
+						data-hasimg={ !! attributes.imgID ? 'true' : 'false' }
 					>
 						{
 							focus ? (

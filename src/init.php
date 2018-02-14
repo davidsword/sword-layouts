@@ -26,7 +26,8 @@ function _sandbox_layouts_cgb_block_assets() {
 	wp_enqueue_style(
 		'_sandbox_layouts-cgb-style-css', // Handle.
 		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ), // Block style CSS.
-		array( 'wp-blocks' ) // Dependency to include the CSS after it.
+		array( 'wp-blocks' ), // Dependency to include the CSS after it.
+		time()
 		// filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' ) // Version: filemtime — Gets file modification time.
 	);
 } // End function _sandbox_layouts_cgb_block_assets().
@@ -57,7 +58,8 @@ function _sandbox_layouts_cgb_editor_assets() {
 	wp_enqueue_style(
 		'_sandbox_layouts-cgb-block-editor-css', // Handle.
 		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ), // Block editor CSS.
-		array( 'wp-edit-blocks' ) // Dependency to include the CSS after it.
+		array( 'wp-edit-blocks' ), // Dependency to include the CSS after it.
+		time()
 		//filemtime( dirname( __FILE__ ) . '/dist/blocks.editor.build.css' ) // Version: filemtime — Gets file modification time.
 	);
 } // End function _sandbox_layouts_cgb_editor_assets().
