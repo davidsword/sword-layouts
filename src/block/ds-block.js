@@ -1,10 +1,6 @@
 /**
  * BLOCK: _sandbox-layouts
- *
- *
- *
  */
-
 /* eslint-disable react/jsx-key */
 
 //import classnames from 'classnames';
@@ -59,11 +55,10 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 		invert: {
 			type: 'boolean',
 			default: false,
-		}
+		},
 	},
 
-	// 🔥 not working
-	getEditWrapperProps( attributes ) {
+	getEditWrapperProps( ) {
 		return { 'data-align': 'full' };
 	},
 
