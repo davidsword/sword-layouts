@@ -8,7 +8,7 @@ Some Gutenberg blocks that add layouts I love to see in modern sites.
 
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot.png)
 
-and
+Front end
 
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot2.gif)
 

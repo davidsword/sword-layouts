@@ -34,7 +34,9 @@ bower_components
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directories
+# Dependency directories (and symbolic links)
+node_modules
+node_modules.nosync
 node_modules.nosync/
 node_modules/
 jspm_packages/

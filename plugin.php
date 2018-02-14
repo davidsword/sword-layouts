@@ -1,24 +1,40 @@
 <?php
 /**
- * Plugin Name: _sandbox-layouts — CGB Gutenberg Block Plugin
- * Plugin URI: https://github.com/ahmadawais/create-guten-block/
- * Description: _sandbox-layouts — is a Gutenberg plugin created via create-guten-block.
- * Author: mrahmadawais, maedahbatool
- * Author URI: https://AhmadAwais.com/
- * Version: 1.0.0
- * License: GPL2+
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- *
- * @package CGB
- */
+* Plugin Name: 🚧 Sword Layouts
+* Plugin URI: https://github.com/davidsword/sword-layouts
+* Description: Some Gutenberg blocks that add modern layouts
+* Author: davidsword
+* Author URI: https://davidsword.ca/
+* Version: 1.0.0
+* License: GPL3
+* License URI: https://raw.githubusercontent.com/davidsword/sword-layouts/master/LICENSE
+*/
 
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+defined( 'ABSPATH' ) || exit;
+
+add_action( 'enqueue_block_assets', 'sword_layouts_block_assets' );
+add_action( 'enqueue_block_editor_assets', 'sword_layouts_editor_assets' );
+
+function sword_layouts_block_assets() {
+	wp_enqueue_style(
+		'_sandbox_layouts-cgb-style-css',
+		plugins_url( 'dist/blocks.style.build.css',  __FILE__  ),
+		array( 'wp-blocks' ),
+		filemtime( plugin_dir_path( __FILE__ ) . 'dist/blocks.style.build.css' )
+	);
 }
 
-/**
- * Block Initializer.
- */
- 
-require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
+function sword_layouts_editor_assets() {
+	wp_enqueue_script(
+		'_sandbox_layouts-cgb-block-js',
+		plugins_url( '/dist/blocks.build.js', __FILE__ ),
+		array( 'wp-blocks', 'wp-i18n', 'wp-element' ),
+		filemtime( plugin_dir_path( __FILE__ ) . '/dist/blocks.build.js' )
+	);
+	wp_enqueue_style(
+		'_sandbox_layouts-cgb-block-editor-css',
+		plugins_url( 'dist/blocks.editor.build.css',  __FILE__  ),
+		array( 'wp-edit-blocks' ),
+		filemtime( dirname( __FILE__ ) . '/dist/blocks.editor.build.css' )
+	);
+}
