@@ -1,5 +1,7 @@
 /**
- * BLOCK: _sandbox-layouts
+ * Tile Layout
+ *
+ * @package: Sword Layouts
  */
 
 /* eslint-disable react/jsx-key */
@@ -9,13 +11,12 @@ import './editor.scss';
 const { __ } = wp.i18n;
 const {
 	registerBlockType,
-	Editable,
+	RichText,
 	MediaUpload,
 	InspectorControls,
 	BlockDescription,
-	//AlignmentToolbar,
-	//BlockControls,
-	//BlockAlignmentToolbar
+	AlignmentToolbar,
+	BlockControls,
 } = wp.blocks;
 const {
 	Button,
@@ -25,15 +26,11 @@ const {
 	FormToggle,
 } = wp.components;
 
-registerBlockType( 'cgb/block-sandbox-layouts', {
-	title: __( 'Sword Layouts', 'CGB' ),
+registerBlockType( 'swrdlyts/tile', {
+	title: __( 'Sword Layouts', 'swrdlyts' ),
 	icon: 'shield',
-	category: 'common',
-	keywords: [
-		__( '_sandbox-layouts — CGB Block' ),
-		__( 'CGB Example' ),
-		__( 'create-guten-block' ),
-	],
+	category: 'layout',
+	keywords: [ __( 'tile' ), __( 'stagger' ), __( 'image' ) ],
 	attributes: {
 		imgURL: {
 			type: 'string',
@@ -56,13 +53,16 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 			type: 'boolean',
 			default: false,
 		},
+		alignment: {
+			type: 'string',
+		},
 	},
-
 	getEditWrapperProps( ) {
 		return { 'data-align': 'full' };
 	},
-
-	// Edit --------------------------------
+	// ----
+	// EDIT
+	// ----
 	edit( { attributes, setAttributes, className, focus } ) {
 		const onChangeContent = value => {
 			setAttributes( { content: value } );
@@ -75,6 +75,9 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 				imgID: img.id,
 				imgURL: img.url,
 			} );
+		};
+		const onChangeAlignment = value => {
+			setAttributes( { alignment: value } );
 		};
 		const buttonText = ( ! attributes.imgID ) ? 'Select Image' : 'Change Image';
 		const buttonIcon = ( ! attributes.imgID ) ? 'add' : 'edit';
@@ -119,7 +122,7 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 						data-hasimg={ !! attributes.imgID ? 'true' : 'false' }
 					>
 						{
-							focus ? (
+							!! focus ? (
 								<MediaUpload
 									buttonProps={ {
 										className: 'components-button button button-large',
@@ -143,11 +146,22 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 						}
 					</div>
 					<div className="textBox">
-						<Editable
+						{
+							!! focus && (
+								<BlockControls key="controls">
+									<AlignmentToolbar
+										value={ attributes.alignment }
+										onChange={ onChangeAlignment }
+									/>
+								</BlockControls>
+							)
+						}
+						<RichText
 							tagname="div"
 							multiline="p"
 							className="textBoxContent"
 							placeholder="...."
+							style={ { textAlign: attributes.alignment } }
 							value={ attributes.content }
 							onChange={ onChangeContent }
 						/>
@@ -156,7 +170,9 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 			),
 		];
 	},
-	// Save --------------------------------
+	// ----
+	// SAVE
+	// ----
 	save: function( props ) {
 		return ( <div className={ props.className } data-invert={ props.attributes.invert }>
 			<div
@@ -166,7 +182,10 @@ registerBlockType( 'cgb/block-sandbox-layouts', {
 				style={ { backgroundImage: 'url(' + props.attributes.imgURL + ')' } }
 			></div>
 			<div className="textBox">
-				<div className="textBoxContent">
+				<div
+					className="textBoxContent"
+					style={ { textAlign: props.attributes.alignment } }
+				>
 					{ props.attributes.content }
 				</div>
 			</div>

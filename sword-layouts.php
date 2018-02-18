@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: 🚧 Sword Layouts
+* Plugin Name: Sword Layouts
 * Plugin URI: https://github.com/davidsword/sword-layouts
 * Description: Some Gutenberg blocks that add modern layouts
 * Author: davidsword
@@ -17,7 +17,7 @@ add_action( 'enqueue_block_editor_assets', 'sword_layouts_editor_assets' );
 
 function sword_layouts_block_assets() {
 	wp_enqueue_style(
-		'_sandbox_layouts-cgb-style-css',
+		'swrdlyts-style-css',
 		plugins_url( 'dist/blocks.style.build.css',  __FILE__  ),
 		array( 'wp-blocks' ),
 		filemtime( plugin_dir_path( __FILE__ ) . 'dist/blocks.style.build.css' )
@@ -26,13 +26,13 @@ function sword_layouts_block_assets() {
 
 function sword_layouts_editor_assets() {
 	wp_enqueue_script(
-		'_sandbox_layouts-cgb-block-js',
+		'swrdlyts-block-js',
 		plugins_url( '/dist/blocks.build.js', __FILE__ ),
 		array( 'wp-blocks', 'wp-i18n', 'wp-element' ),
 		filemtime( plugin_dir_path( __FILE__ ) . '/dist/blocks.build.js' )
 	);
 	wp_enqueue_style(
-		'_sandbox_layouts-cgb-block-editor-css',
+		'swrdlyts-block-editor-css',
 		plugins_url( 'dist/blocks.editor.build.css',  __FILE__  ),
 		array( 'wp-edit-blocks' ),
 		filemtime( dirname( __FILE__ ) . '/dist/blocks.editor.build.css' )

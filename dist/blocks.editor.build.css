@@ -2,10 +2,7 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-/**
-  * CSS for both Frontend+Backend.
-  */
-.wp-block-cgb-block-sandbox-layouts > div.imageBox button {
+.wp-block-swrdlyts-tile > div.imageBox button {
   top: 50%;
   margin-top: -17px;
   display: inline-block;
@@ -14,12 +11,12 @@
   -o-transition: 1s all ease;
   transition: 1s all ease; }
 
-.wp-block-cgb-block-sandbox-layouts > div.imageBox[data-hasimg=true] button {
+.wp-block-swrdlyts-tile > div.imageBox[data-hasimg=true] button {
   z-index: 3;
   position: relative;
   opacity: 0; }
 
-.wp-block-cgb-block-sandbox-layouts > div.imageBox[data-hasimg=true]:before {
+.wp-block-swrdlyts-tile > div.imageBox[data-hasimg=true]:before {
   -webkit-transition: 0.5s all ease;
   -o-transition: 0.5s all ease;
   transition: 0.5s all ease;
@@ -33,10 +30,10 @@
   z-index: 1;
   background: transparent; }
 
-.is-selected .wp-block-cgb-block-sandbox-layouts > div.imageBox[data-hasimg=true]:hover:before {
+.is-selected .wp-block-swrdlyts-tile > div.imageBox[data-hasimg=true]:hover:before {
   background: rgba(111, 111, 111, 0.7); }
 
-.is-selected .wp-block-cgb-block-sandbox-layouts > div.imageBox[data-hasimg=true]:hover button {
+.is-selected .wp-block-swrdlyts-tile > div.imageBox[data-hasimg=true]:hover button {
   -webkit-filter: blur(0px);
           filter: blur(0px);
   opacity: 1; }

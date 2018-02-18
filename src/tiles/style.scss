@@ -1,8 +1,7 @@
 /**
  * CSS for both Frontend+Backend.
  */
-
-.wp-block-cgb-block-sandbox-layouts {
+.wp-block-swrdlyts-tile {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-gap: 0;
@@ -41,4 +40,10 @@
 			grid-row-start: 1;
 		}
 	}
+}
+
+@media screen and (max-width: 800px) {
+	//
+	// @TODO mobile
+	//
 }
