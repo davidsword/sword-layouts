@@ -1,20 +1,17 @@
 # Sword Layout(s)
 
-```
-🔥⌨️ Currently in dev
-```
+🚧 Currently in development
 
-Some Gutenberg blocks that add layouts I love to see in modern sites.
+## Current layouts
+
+#### ✅ TILE
 
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot.png)
-
-Front end
-
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot2.gif)
 
-### CREDITS
+_..more on the way!_
 
-Big shouts to
+### Credits
 
- - [@ahmadawais](https://github.com/ahmadawais/create-guten-block) for the foundation
- - [@zgordon](https://gutenberg.courses/development/) for the teaching
+ - 🙏 [@ahmadawais](https://github.com/ahmadawais/create-guten-block) for the create-guten-block foundation
+ - 🙏 [@zgordon](https://gutenberg.courses/development/) for the teaching
