@@ -164,6 +164,7 @@ registerBlockType( 'swrdlyts/tile', {
 							style={ { textAlign: attributes.alignment } }
 							value={ attributes.content }
 							onChange={ onChangeContent }
+							isSelected={ focus }
 						/>
 					</div>
 				</div>

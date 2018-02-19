@@ -11,10 +11,11 @@ Layout blocks for Gutenberg that create more interesting and modern pages.
 
 == Description ==
 
-= Currently layouts =
+= Current Layouts =
 
- - ✅ TILE
- - 🚧 _..more on the way!_
+ - ✅ TILE (see screenshots)
+
+_..more on the way!_
 
 = Please Note =
 
