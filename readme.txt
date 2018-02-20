@@ -1,10 +1,10 @@
 === Sword Layouts ===
 Contributors:      davidsword
 Donate link:       https://davidsword.ca/🍺/
-Tags:              Gutenberg, Blocks, Layouts, Modern,
+Tags:              Gutenberg, Blocks, Layouts, Modern, Page Builder, Design
 Requires at least: 4.9.4
 Tested up to:      4.9.4
-Stable tag:        1.0.0
+Stable tag:        1.0.1
 Requires PHP:      5.6.0
 
 Layout blocks for Gutenberg that create more interesting and modern pages.
@@ -20,7 +20,6 @@ Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that
 
 = Please Note =
 
-* 🚀 This is a new plugin,
 * 🚀 This is a beta plugin for the beta plugin [Gutenberg](https://wordpress.org/plugins/gutenberg/) - things will be rocky. Please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, Wordpress and PHP versions, able-to-replicate instructions).
 
 = Big shouts to =
@@ -38,16 +37,26 @@ Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that
  - download the plugin and extract the files and upload `sword-layouts` to your `/wp-content/plugins/` directory
  - Activate the plugin through the 'Plugins' menu in WordPress
 
-
 == Frequently Asked Questions ==
 
-= Where is the block? =
+= Where can I find the block? =
 
-On your Gutenberg editor, it's in Add Block > Layouts > Tile
+Within the Gutenberg editor, + Add Block > Layouts > Tile
 
-= Why is there space between the blocks in the editor? =
+= Why is there space between the blocks in the editor but not the front end? =
 
 Blocks need some padding in the editor for usability. The front end blocks will touch, creating the seamless Tile design.
+
+= How do I get the image on the left, and the text on the right? =
+
+Select the block.
+
+The right hand side of the editor should be the Settings pane. If it's not present, hit the cog (gear wheel) in the top right to toggle view.
+
+There's tabs for "Document" and "Block", click the latter.
+
+Turn "Invert Layout" on.
+
 
 == Screenshots ==
 
@@ -68,5 +77,5 @@ Blocks need some padding in the editor for usability. The front end blocks will 
 
 == Additional Notes ==
 
-* 🤓 Please visit Github for build files and full documentation
-* 📦 If you have any additional requests into [the Support tab](https://wordpress.org/support/plugin/sword-layouts).
+* 🤓 Please visit [Github](https://github.com/davidsword/sword-layouts/) for build files and full documentation
+* 🤓 If you have any additional requests into [the Support tab](https://wordpress.org/support/plugin/sword-layouts).

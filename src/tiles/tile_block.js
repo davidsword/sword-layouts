@@ -26,7 +26,7 @@ const {
 } = wp.components;
 
 registerBlockType( 'swrdlyts/tile', {
-	title: __( 'Sword Layouts', 'swrdlyts' ),
+	title: __( 'Tile', 'swrdlyts' ),
 	icon: 'shield',
 	category: 'layout',
 	keywords: [ __( 'tile' ), __( 'stagger' ), __( 'image' ) ],
