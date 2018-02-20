@@ -2,6 +2,9 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
+[data-move-toolbar-right=true] .editor-block-contextual-toolbar {
+  text-align: right; }
+
 .wp-block-swrdlyts-tile > div.imageBox button {
   top: 50%;
   margin-top: -17px;

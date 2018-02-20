@@ -14,7 +14,6 @@ const {
 	RichText,
 	MediaUpload,
 	InspectorControls,
-	BlockDescription,
 	AlignmentToolbar,
 	BlockControls,
 } = wp.blocks;
@@ -57,8 +56,12 @@ registerBlockType( 'swrdlyts/tile', {
 			type: 'string',
 		},
 	},
-	getEditWrapperProps( ) {
-		return { 'data-align': 'full' };
+	getEditWrapperProps( attributes ) {
+		const moveToolBar = attributes.invert ? 'false' : 'true';
+		return {
+			'data-align': 'full',
+			'data-move-toolbar-right': moveToolBar,
+		};
 	},
 	// ----
 	// EDIT
@@ -85,11 +88,7 @@ registerBlockType( 'swrdlyts/tile', {
 			!! focus && (
 				<InspectorControls key="inspector">
 
-					<BlockDescription>
-						<p>{ __( 'Block controls.  Do more.' ) }</p>
-					</BlockDescription>
-
-					<PanelBody title={ __( 'Invert Layout' ) }>
+					<PanelBody>
 
 						<PanelRow>
 							<label

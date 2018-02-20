@@ -11,15 +11,17 @@ Layout blocks for Gutenberg that create more interesting and modern pages.
 
 == Description ==
 
+Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that create more interesting and modern page designs.
+
 = Current Layouts =
 
  - ✅ TILE (see screenshots)
-
-_..more on the way!_
+ - _..more on the way!_
 
 = Please Note =
 
-* 🚀 This is a new plugin, please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, Wordpress and PHP versions, able-to-replicate instructions).
+* 🚀 This is a new plugin,
+* 🚀 This is a beta plugin for the beta plugin [Gutenberg](https://wordpress.org/plugins/gutenberg/) - things will be rocky. Please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, Wordpress and PHP versions, able-to-replicate instructions).
 
 = Big shouts to =
 
