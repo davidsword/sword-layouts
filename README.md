@@ -4,7 +4,7 @@ Layout blocks for [Gutenberg](https://wordpress.org/plugins/gutenberg/) that hel
 
 Also see it in [wordpress.org/plugins/](https://wordpress.org/plugins/sword-layouts/).
 
-## Current Layouts
+## Current Layout(s)
 
 #### ✅ TILE
 
@@ -15,11 +15,7 @@ Also see it in [wordpress.org/plugins/](https://wordpress.org/plugins/sword-layo
 
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-6.gif)
 
-__Note the gaps between blocks are only in the Editor for block control reasons.__
-
-#### 🚧
-
-* _..more layouts on the way!_
+_Note the gaps between blocks are only in the Editor for block control reasons._
 
 ### Credits
 
