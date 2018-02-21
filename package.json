@@ -1,6 +1,6 @@
 {
-  "name": "_sandbox-layouts-cgb-guten-block",
-  "version": "1.0.0",
+  "name": "sword-layouts",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "start": "cgb-scripts start",
