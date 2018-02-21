@@ -4,10 +4,10 @@ Donate link:       https://davidsword.ca/🍺/
 Tags:              Gutenberg, Blocks, Layouts, Modern, Page Builder, Design
 Requires at least: 4.9.4
 Tested up to:      4.9.4
-Stable tag:        1.0.1
+Stable tag:        1.0.2
 Requires PHP:      5.6.0
 
-Layout blocks for Gutenberg that create more interesting and modern pages.
+Layout blocks for Gutenberg that help create more interesting and modern Wordpress pages.
 
 == Description ==
 
@@ -16,11 +16,17 @@ Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that
 = Current Layouts =
 
  - ✅ TILE (see screenshots)
- - _..more on the way!_
+     * Stagger small blurbs of text along side beautiful images
+     * Creates a "magazine" style to your webpage
+     * Fully responsive
+     * Built with CSS Grid
+
+ - 🚧 _..more on the way!_
 
 = Please Note =
 
-* 🚀 This is a beta plugin for the beta plugin [Gutenberg](https://wordpress.org/plugins/gutenberg/) - things will be rocky. Please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, Wordpress and PHP versions, able-to-replicate instructions).
+* 🚀 This is a beta plugin for the beta plugin [Gutenberg](https://wordpress.org/plugins/gutenberg/) - things will be rocky.
+* ⚠️ Please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, Wordpress and PHP versions, able-to-replicate instructions).
 
 = Big shouts to =
 
@@ -60,10 +66,22 @@ Turn "Invert Layout" on.
 
 == Screenshots ==
 
-1. Tile layout in Gutenberg
-2. Tile layout on front end
+1. Tile - front end
+2. Tile - within Gutenberg
+3. Tile - Fully responsive
+4. Tile - a great layout for little text, and great images
+5. Tile - easily stagger the tile layout
 
 == Changelog ==
+
+= 1.0.2 =
+* Feb 20, 2018
+* minor fixes to CSS grid (for better browser support)
+* more readme changes
+
+= 1.0.1 =
+* Feb 19, 2018
+* readme fixes, minor changes to block name
 
 = 1.0.0 =
 * Feb 17, 2018
@@ -71,11 +89,16 @@ Turn "Invert Layout" on.
 
 == Upgrade Notice ==
 
+
+= 1.0.1 =
+
+* blue skys
+
 = 1.0.0 =
 
 * blue skys
 
 == Additional Notes ==
 
-* 🤓 Please visit [Github](https://github.com/davidsword/sword-layouts/) for build files and full documentation
+* 👨🏻‍💻 Please visit [Github](https://github.com/davidsword/sword-layouts/) for build files and full documentation
 * 🤓 If you have any additional requests into [the Support tab](https://wordpress.org/support/plugin/sword-layouts).

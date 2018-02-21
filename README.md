@@ -1,21 +1,23 @@
-# Sword Layout(s)
+# Sword Layouts
 
-🚧 Currently in development
+Layout blocks for [Gutenberg](https://wordpress.org/plugins/gutenberg/) that help create more interesting and modern Wordpress pages.
 
-## Current layouts
+Also see it in [wordpress.org/plugins/](https://wordpress.org/plugins/sword-layouts/).
+
+## Current Layouts
 
 #### ✅ TILE
 
-Editor:
-![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-1.png)
+* Stagger small blurbs of text along side beautiful images
+* Creates a "magazine" style to your webpage
+* Fully responsive
+* Built with CSS Grid
 
-Front End:
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-6.gif)
 
-On Mobile:
-![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-5.gif)
+#### 🚧
 
-_..more on the way!_
+* _..more layouts on the way!_
 
 ### Credits
 
@@ -25,5 +27,5 @@ _..more on the way!_
 
 ### TODO
 
-[ ] Add more Blocks
-[ ] Add notice for requirement of Gutenberg if not installed
+- [ ] Add more Blocks
+- [ ] Add notice for requirement of Gutenberg if not installed

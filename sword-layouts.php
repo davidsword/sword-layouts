@@ -1,11 +1,11 @@
 <?php
 /**
-* Plugin Name: Sword Layouts
+* Plugin Name: Gutenberg - Sword Layouts
 * Plugin URI: https://github.com/davidsword/sword-layouts
 * Description: Some Gutenberg blocks that add modern layouts
 * Author: davidsword
 * Author URI: https://davidsword.ca/
-* Version: 1.0.1
+* Version: 1.0.2
 * License: GPL3
 * License URI: https://raw.githubusercontent.com/davidsword/sword-layouts/master/LICENSE
 */
