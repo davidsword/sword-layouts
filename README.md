@@ -1,8 +1,8 @@
 # Sword Layouts
 
-Layout blocks for [Gutenberg](https://wordpress.org/plugins/gutenberg/) that help create more interesting and modern Wordpress pages.
+Layout blocks for [Gutenberg](https://wordpress.org/plugins/gutenberg/) that help create more interesting and modern WordPress pages.
 
-Also see it in [wordpress.org/plugins/](https://wordpress.org/plugins/sword-layouts/).
+Also see it in [WordPress.org/plugins/](https://wordpress.org/plugins/sword-layouts/).
 
 ## Current Layout(s)
 

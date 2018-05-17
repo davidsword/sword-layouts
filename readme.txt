@@ -7,7 +7,7 @@ Tested up to:      4.9.4
 Stable tag:        1.0.2
 Requires PHP:      5.6.0
 
-Layout blocks for Gutenberg that help create more interesting and modern Wordpress pages.
+Layout blocks for Gutenberg that help create more interesting and modern WordPress pages.
 
 == Description ==
 
@@ -26,7 +26,7 @@ Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that
 = Please Note =
 
 * 🚀 This is a beta plugin for the beta plugin [Gutenberg](https://wordpress.org/plugins/gutenberg/) - things will be rocky.
-* ⚠️ Please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, Wordpress and PHP versions, able-to-replicate instructions).
+* ⚠️ Please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, WordPress and PHP versions, able-to-replicate instructions).
 
 = Big shouts to =
 
