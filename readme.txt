@@ -66,11 +66,8 @@ Turn "Invert Layout" on.
 
 == Screenshots ==
 
-1. Tile - front end
+1. Tile - frontend
 2. Tile - within Gutenberg
-3. Tile - Fully responsive
-4. Tile - a great layout for little text, and great images
-5. Tile - easily stagger the tile layout
 
 == Changelog ==
 
