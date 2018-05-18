@@ -14,7 +14,9 @@ Also see it in [WordPress.org/plugins/](https://wordpress.org/plugins/sword-layo
 
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-2.gif)
 
-_Note the gaps between blocks are only in the Editor for block control reasons._
+The gaps between blocks are only in the Editor for block control reasons. Front end tightens up and resembles a the tile layout better:
+
+![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-1.gif)
 
 #### ..more on the way
 
