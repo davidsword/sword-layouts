@@ -9,6 +9,7 @@
 import './style.scss';
 import './editor.scss';
 const { __ } = wp.i18n;
+
 const {
 	registerBlockType,
 	RichText,
@@ -26,7 +27,8 @@ const {
 } = wp.components;
 
 registerBlockType( 'swrdlyts/tile', {
-	title: __( 'Tile', 'swrdlyts' ),
+	title: __( 'Tile Layout' ),
+	description: __('Creates two columns, half image, half padded text. Use multiple, invert to tile.'),
 	icon: 'shield',
 	category: 'layout',
 	keywords: [ __( 'tile' ), __( 'stagger' ), __( 'image' ) ],
@@ -66,7 +68,7 @@ registerBlockType( 'swrdlyts/tile', {
 	// ----
 	// EDIT
 	// ----
-	edit( { attributes, setAttributes, className, focus } ) {
+	edit( { attributes, setAttributes, className, isSelected } ) {
 		const onChangeContent = value => {
 			setAttributes( { content: value } );
 		};
@@ -85,7 +87,7 @@ registerBlockType( 'swrdlyts/tile', {
 		const buttonText = ( ! attributes.imgID ) ? 'Select Image' : 'Change Image';
 		const buttonIcon = ( ! attributes.imgID ) ? 'add' : 'edit';
 		return [
-			!! focus && (
+			!! isSelected && (
 				<InspectorControls key="inspector">
 
 					<PanelBody>
@@ -121,7 +123,7 @@ registerBlockType( 'swrdlyts/tile', {
 						data-hasimg={ !! attributes.imgID ? 'true' : 'false' }
 					>
 						{
-							!! focus ? (
+							!! isSelected ? (
 								<MediaUpload
 									buttonProps={ {
 										className: 'components-button button button-large',
@@ -146,7 +148,7 @@ registerBlockType( 'swrdlyts/tile', {
 					</div>
 					<div className="textBox">
 						{
-							!! focus && (
+							!! isSelected && (
 								<BlockControls key="controls">
 									<AlignmentToolbar
 										value={ attributes.alignment }
@@ -163,7 +165,7 @@ registerBlockType( 'swrdlyts/tile', {
 							style={ { textAlign: attributes.alignment } }
 							value={ attributes.content }
 							onChange={ onChangeContent }
-							isSelected={ focus }
+							isSelected={ isSelected }
 						/>
 					</div>
 				</div>
