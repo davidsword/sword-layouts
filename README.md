@@ -14,9 +14,7 @@ Also see it in [WordPress.org/plugins/](https://wordpress.org/plugins/sword-layo
 
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-2.gif)
 
-The gaps between blocks are only in the Editor for block control reasons. Front end tightens up and resembles a the tile layout better:
-
-![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-1.gif)
+The gaps between blocks are only in the Editor for block control reasons. [The front end](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-1.gif) snugs everything up and creates the tile layout better.
 
 #### ..more on the way
 
@@ -29,7 +27,7 @@ The gaps between blocks are only in the Editor for block control reasons. Front 
  - 🙏 [@zgordon](https://gutenberg.courses/development/) for the teaching
 
 
-### TODO
+### Road Map
 
 - [ ] Add more Blocks
 - [ ] Add notice for requirement of Gutenberg if not installed
