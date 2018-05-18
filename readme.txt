@@ -15,13 +15,12 @@ Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that
 
 = Current Layouts =
 
- - ✅ TILE (see screenshots)
+ - **TILE** (see screenshots)
      * Stagger small blurbs of text along side beautiful images
      * Creates a "magazine" style to your webpage
      * Fully responsive
-     * Built with CSS Grid
 
- - 🚧 _..more on the way!_
+ - 🚧 _..more on the way - this project is in a work in progress!_
 
 = Please Note =
 

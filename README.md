@@ -6,16 +6,20 @@ Also see it in [WordPress.org/plugins/](https://wordpress.org/plugins/sword-layo
 
 ## Current Layout(s)
 
-#### ✅ TILE
+#### TILE
 
 * Stagger small blurbs of text along side beautiful images
 * Creates a "magazine" style to your webpage
 * Fully responsive
-* Built with CSS Grid
 
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-2.gif)
 
 _Note the gaps between blocks are only in the Editor for block control reasons._
+
+#### ..more on the way
+
+* _this project is in a work in progress!_
+
 
 ### Credits
 
