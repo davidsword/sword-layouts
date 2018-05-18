@@ -3,8 +3,9 @@
  * which makes it higher in priority.
  */
 [data-move-toolbar-right=true] {
-    .editor-block-contextual-toolbar {
-        text-align: right;
+    .editor-block-contextual-toolbar .editor-block-toolbar {
+        left: auto;
+		right:0;
     }
 }
 
