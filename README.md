@@ -13,7 +13,7 @@ Also see it in [WordPress.org/plugins/](https://wordpress.org/plugins/sword-layo
 * Fully responsive
 * Built with CSS Grid
 
-![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-6.gif)
+![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-2.gif)
 
 _Note the gaps between blocks are only in the Editor for block control reasons._
 
