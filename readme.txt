@@ -4,7 +4,7 @@ Donate link:       https://davidsword.ca/🍺/
 Tags:              Gutenberg, Blocks, Layouts, Modern, Page Builder, Design
 Requires at least: 4.9.4
 Tested up to:      4.9.4
-Stable tag:        1.0.2
+Stable tag:        1.0.3
 Requires PHP:      5.6.0
 
 Layout blocks for Gutenberg that help create more interesting and modern WordPress pages.
@@ -73,6 +73,12 @@ Turn "Invert Layout" on.
 5. Tile - easily stagger the tile layout
 
 == Changelog ==
+
+= 1.0.3 =
+* May 18, 2018
+* code updates to work with Gutenberg 2.8.0
+* changed CSS from grid to flexbox
+* reduced screenshots
 
 = 1.0.2 =
 * Feb 20, 2018

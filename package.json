@@ -1,6 +1,6 @@
 {
   "name": "sword-layouts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "scripts": {
     "start": "cgb-scripts start",
@@ -8,6 +8,7 @@
     "eject": "cgb-scripts eject"
   },
   "dependencies": {
-    "cgb-scripts": "1.9.3"
+    "@wordpress/i18n": "^1.1.0",
+    "cgb-scripts": "1.9.6"
   }
 }
