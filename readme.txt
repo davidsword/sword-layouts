@@ -4,7 +4,7 @@ Donate link:       https://davidsword.ca/🍺/
 Tags:              Gutenberg, Blocks, Layouts, Modern, Page Builder, Design
 Requires at least: 4.9.4
 Tested up to:      4.9.4
-Stable tag:        1.0.3
+Stable tag:        1.0.4
 Requires PHP:      5.6.0
 
 Layout blocks for Gutenberg that help create more interesting and modern WordPress pages.
@@ -70,6 +70,11 @@ Turn "Invert Layout" on.
 
 == Changelog ==
 
+= 1.0.4 =
+* Jul 2, 2018
+* updated code for Gutenberg 3.1.1
+* changed some wp.blocks.* to wp.editor.*
+
 = 1.0.3 =
 * May 18, 2018
 * code updates to work with Gutenberg 2.8.0
@@ -91,6 +96,9 @@ Turn "Invert Layout" on.
 
 == Upgrade Notice ==
 
+= 1.0.4 =
+
+* blue skys
 
 = 1.0.1 =
 
@@ -104,3 +112,7 @@ Turn "Invert Layout" on.
 
 * 👨🏻‍💻 Please visit [Github](https://github.com/davidsword/sword-layouts/) for build files and full documentation
 * 🤓 If you have any additional requests into [the Support tab](https://wordpress.org/support/plugin/sword-layouts).
+
+=== @TODO ===
+
+ - [] focus on AlignmentToolbar only when in RichText, not the entire block

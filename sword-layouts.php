@@ -5,7 +5,7 @@
 * Description: Some Gutenberg blocks that add modern layouts
 * Author: davidsword
 * Author URI: https://davidsword.ca/
-* Version: 1.0.3
+* Version: 1.0.4
 * License: GPL3
 * License URI: https://raw.githubusercontent.com/davidsword/sword-layouts/master/LICENSE
 */
