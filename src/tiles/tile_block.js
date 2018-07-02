@@ -9,14 +9,15 @@
 import './style.scss';
 import './editor.scss';
 const { __ } = wp.i18n;
-
+const {
+	InspectorControls,
+	MediaUpload,
+	BlockControls,
+	AlignmentToolbar,
+	RichText,
+} = wp.editor;
 const {
 	registerBlockType,
-	RichText,
-	MediaUpload,
-	InspectorControls,
-	AlignmentToolbar,
-	BlockControls,
 } = wp.blocks;
 const {
 	Button,
@@ -28,7 +29,7 @@ const {
 
 registerBlockType( 'swrdlyts/tile', {
 	title: __( 'Tile Layout' ),
-	description: __('Creates two columns, half image, half padded text. Use multiple, invert to tile.'),
+	description: __( 'Creates two columns, half image, half padded text. Use multiple, invert to tile.' ),
 	icon: 'shield',
 	category: 'layout',
 	keywords: [ __( 'tile' ), __( 'stagger' ), __( 'image' ) ],
