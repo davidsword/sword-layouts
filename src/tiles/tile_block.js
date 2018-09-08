@@ -8,29 +8,36 @@
 
 import './style.scss';
 import './editor.scss';
+import icon from './icon.js';
+import classnames from 'classnames';
+
 const { __ } = wp.i18n;
 const {
+	AlignmentToolbar,
+	BlockControls,
 	InspectorControls,
 	MediaUpload,
-	BlockControls,
-	AlignmentToolbar,
+	MediaPlaceholder,
 	RichText,
+	ColorPalette,
+	getColorClassName,
 } = wp.editor;
 const {
 	registerBlockType,
 } = wp.blocks;
 const {
-	Button,
-	Dashicon,
+	ToggleControl,
+	RangeControl,
+	IconButton,
 	PanelBody,
-	PanelRow,
-	FormToggle,
+	PanelColor,
+	Toolbar,
 } = wp.components;
 
 registerBlockType( 'swrdlyts/tile', {
 	title: __( 'Tile Layout' ),
 	description: __( 'Creates two columns, half image, half padded text. Use multiple, invert to tile.' ),
-	icon: 'shield',
+	icon,
 	category: 'layout',
 	keywords: [ __( 'tile' ), __( 'stagger' ), __( 'image' ) ],
 	attributes: {
@@ -54,6 +61,22 @@ registerBlockType( 'swrdlyts/tile', {
 		invert: {
 			type: 'boolean',
 			default: false,
+		},
+		backgroundColor: {
+			type: 'string',
+			default: 'rgba(0,0,0,0)',
+		},
+		textColor: {
+			type: 'string',
+			default: '',
+		},
+		paddingTB: {
+			type: 'string',
+			default: '65',
+		},
+		width: {
+			type: 'string',
+			default: '80',
 		},
 		alignment: {
 			type: 'string',
@@ -87,34 +110,73 @@ registerBlockType( 'swrdlyts/tile', {
 		};
 		const buttonText = ( ! attributes.imgID ) ? 'Select Image' : 'Change Image';
 		const buttonIcon = ( ! attributes.imgID ) ? 'add' : 'edit';
+
+		const textColor = getColorClassName( 'color', attributes.textColor );
+
 		return [
 			!! isSelected && (
 				<InspectorControls key="inspector">
-
 					<PanelBody>
-
-						<PanelRow>
-							<label
-								htmlFor="invert-form-toggle"
-								className="blocks-base-control__label"
-							>
-								{ __( 'Invert Layout' ) }
-							</label>
-							<FormToggle
-								id="invert-form-toggle"
-								label={ __( 'Invert Layout' ) }
-								checked={ !! attributes.invert }
-								onChange={ togglePosition }
+						<ToggleControl
+							id="invert-form-toggle"
+							label={ __( 'Invert Layout' ) }
+							checked={ !! attributes.invert }
+							onChange={ togglePosition }
+						/>
+						<RangeControl
+							label={ __( 'Padding: Top Bottom' ) }
+							value={ attributes.paddingTB }
+							onChange={ ( value ) => setAttributes( { paddingTB: value } ) }
+							min={ 20 }
+							max={ 150 }
+							step={ 5 }
+						/>
+						<RangeControl
+							label={ __( 'Width Text Content' ) }
+							value={ attributes.width }
+							onChange={ ( value ) => setAttributes( { width: value } ) }
+							min={ 50 }
+							max={ 90 }
+							step={ 2 }
+						/>
+						<PanelColor
+							title={ __( 'Background Color' ) }
+							colorValue={ attributes.backgroundColor }
+						>
+							<ColorPalette
+								label={ __( 'Background Color' ) }
+								value={ attributes.backgroundColor }
+								onChange={ value => {
+									setAttributes( { backgroundColor: value } );
+								}
+								}
 							/>
-						</PanelRow>
-
+						</PanelColor>
+						<PanelColor
+							title={ __( 'Text Color' ) }
+							colorValue={ attributes.textColor }
+						>
+							<ColorPalette
+								label={ __( 'Text Color' ) }
+								value={ attributes.textColor }
+								onChange={ value => {
+									setAttributes( { textColor: value } );
+								}
+								}
+							/>
+						</PanelColor>
 					</PanelBody>
 				</InspectorControls>
 			), (
 				<div
-					className={ className }
+					className={ classnames( 'alignfull', className ) }
 					data-invert={ attributes.invert ? 'true' : 'false' }
 					data-align="full"
+					data-paddingTB={ attributes.paddingTB }
+					data-width={ attributes.width }
+					style={ {
+						backgroundColor: attributes.backgroundColor,
+					} }
 				>
 					<div
 						className="imageBox"
@@ -124,27 +186,19 @@ registerBlockType( 'swrdlyts/tile', {
 						data-hasimg={ !! attributes.imgID ? 'true' : 'false' }
 					>
 						{
-							!! isSelected ? (
-								<MediaUpload
-									buttonProps={ {
-										className: 'components-button button button-large',
+							! attributes.imgID && (
+								<MediaPlaceholder
+									icon="format-gallery"
+									className={ className }
+									labels={ {
+										title: __( 'Tile Image' ),
+										name: __( '' ),
 									} }
 									onSelect={ onSelectImage }
+									accept="image/*"
 									type="image"
-									value={ attributes.imgID }
-									render={ ( { open } ) => (
-										<Button
-											isLarge
-											onClick={ open }
-											className="components-button components-icon-button button button-large wp-block-image__upload-button"
-										>
-											<Dashicon icon={ buttonIcon } />
-											{ buttonText }
-										</Button>
-									) }
-								>
-								</MediaUpload>
-							) : null
+								/>
+							)
 						}
 					</div>
 					<div className="textBox">
@@ -155,15 +209,38 @@ registerBlockType( 'swrdlyts/tile', {
 										value={ attributes.alignment }
 										onChange={ onChangeAlignment }
 									/>
+									<Toolbar>
+										{
+											attributes.imgID && (
+												<MediaUpload
+													onSelect={ onSelectImage }
+													type="image"
+													value={ attributes.imgID }
+													render={ ( { open } ) => (
+														<IconButton
+															label={ buttonText }
+															icon={ buttonIcon }
+															onClick={ open }
+														/>
+													) }
+												/>
+											)
+										}
+									</Toolbar>
 								</BlockControls>
 							)
 						}
 						<RichText
 							tagname="div"
 							multiline="p"
-							className="textBoxContent"
 							placeholder="...."
-							style={ { textAlign: attributes.alignment } }
+							className={ classnames( 'textBoxContent', textColor ) }
+							style={ {
+								textAlign: attributes.alignment,
+								color: attributes.textColor,
+								padding: attributes.paddingTB + 'px 0',
+								width: attributes.width + '%',
+							} }
 							value={ attributes.content }
 							onChange={ onChangeContent }
 							isSelected={ isSelected }
@@ -173,25 +250,39 @@ registerBlockType( 'swrdlyts/tile', {
 			),
 		];
 	},
-	// ----
-	// SAVE
-	// ----
 	save: function( props ) {
-		return ( <div className={ props.className } data-invert={ props.attributes.invert }>
+		const textColor = getColorClassName( 'color', props.attributes.textColor );
+		return (
 			<div
-				className="imageBox"
-				data-imgurl={ props.attributes.imgURL }
-				data-imgid={ props.attributes.imgID }
-				style={ { backgroundImage: 'url(' + props.attributes.imgURL + ')' } }
-			></div>
-			<div className="textBox">
+				className={ props.className }
+				data-invert={ props.attributes.invert }
+				data-align="full"
+				data-paddingTB={ props.attributes.paddingTB }
+				data-width={ props.attributes.width }
+				style={ {
+					backgroundColor: props.attributes.backgroundColor,
+				} }
+			>
 				<div
-					className="textBoxContent"
-					style={ { textAlign: props.attributes.alignment } }
-				>
-					{ props.attributes.content }
+					className="imageBox"
+					data-imgurl={ props.attributes.imgURL }
+					data-imgid={ props.attributes.imgID }
+					style={ { backgroundImage: 'url(' + props.attributes.imgURL + ')' } }
+				></div>
+				<div className="textBox">
+					<div
+						className={ classnames( 'textBoxContent', textColor ) }
+						style={ {
+							textAlign: props.attributes.alignment,
+							color: props.attributes.textColor,
+							padding: props.attributes.paddingTB + 'px 0',
+							width: props.attributes.width + '%',
+						} }
+					>
+						{ props.attributes.content }
+					</div>
 				</div>
 			</div>
-		</div> );
+		);
 	},
 } );
