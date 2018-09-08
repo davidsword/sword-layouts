@@ -27,6 +27,8 @@ The gaps between blocks are only in the Editor for block control reasons. [The f
 
 ### @TODO
 
+- [ ] Placeholder Media Upload is bumped down, css issue
+- [ ] Add FAQ about "Padding: Top Bottom", as it only applies on mobile and when the text is greater than the images size squared.
 - [ ] Placeholder text for RichText not prominent enough
 - [ ] Add Contrast checker
 - [ ] Add more Blocks

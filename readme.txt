@@ -4,7 +4,7 @@ Donate link:       https://davidsword.ca/🍺/
 Tags:              Gutenberg, Blocks, Layouts, Modern, Page Builder, Design
 Requires at least: 4.9.5
 Tested up to:      4.9.8
-Stable tag:        1.0.6
+Stable tag:        1.0.7
 Requires PHP:      5.6.0
 
 Tile block for Gutenberg that help create more interesting and modern WordPress pages.
@@ -65,6 +65,11 @@ Turn "Invert Layout" on.
 2. Tile - within Gutenberg
 
 == Changelog ==
+
+= 1.0.7 =
+* Sep 8, 2018
+* Fixed issue with obnoxious padding on Media Upload placeholder
+* Added blank index.php files in dirs for security
 
 = 1.0.6 =
 * Sep 8, 2018
