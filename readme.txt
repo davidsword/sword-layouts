@@ -1,30 +1,26 @@
-=== Sword Layouts ===
+=== Gutenberg Tile Block ===
 Contributors:      davidsword
 Donate link:       https://davidsword.ca/🍺/
 Tags:              Gutenberg, Blocks, Layouts, Modern, Page Builder, Design
-Requires at least: 4.9.4
-Tested up to:      4.9.4
-Stable tag:        1.0.4
+Requires at least: 4.9.5
+Tested up to:      4.9.8
+Stable tag:        1.0.6
 Requires PHP:      5.6.0
 
-Layout blocks for Gutenberg that help create more interesting and modern WordPress pages.
+Tile block for Gutenberg that help create more interesting and modern WordPress pages.
 
 == Description ==
 
 Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that create more interesting and modern page designs.
 
-= Current Layouts =
-
- - **TILE** (see screenshots)
-     * Stagger small blurbs of text along side beautiful images
-     * Creates a "magazine" style to your webpage
-     * Fully responsive
-
- - 🚧 _..more on the way - this project is in a work in progress!_
+* Stagger small blurbs of text along side beautiful images
+* Creates a "magazine" style to your webpage
+* Fully responsive
 
 = Please Note =
 
 * 🚀 This is a beta plugin for the beta plugin [Gutenberg](https://wordpress.org/plugins/gutenberg/) - things will be rocky.
+* 🚧 This is a WIP, more layouts will be added and the plugin name will change to "Sword Layouts"
 * ⚠️ Please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, WordPress and PHP versions, able-to-replicate instructions).
 
 = Big shouts to =
@@ -69,6 +65,22 @@ Turn "Invert Layout" on.
 2. Tile - within Gutenberg
 
 == Changelog ==
+
+= 1.0.6 =
+* Sep 8, 2018
+* Changed icon to a new custom one
+* Added spacing padding settings
+* fixed alignment of toolbar, above text regardless of invert
+* changed use of button to buttonIcon
+* changed custom upload button to Placeholder component
+* added text and background colors
+* added padding and width range controls
+* removed dashicons
+
+= 1.0.5 =
+* Aug 14, 2018
+* Updated for Gutenberg 3.5
+* Renamed plugin for easier search keywords
 
 = 1.0.4 =
 * Jul 2, 2018
