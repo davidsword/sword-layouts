@@ -14,23 +14,15 @@
  		.editor-media-placeholder.wp-block-swrdlyts-tile {
 			
 		}
-		&,
  		&[data-hasimg=true] {
- 			&:after {
- 				background: rgba(0,0,0,0);
- 				content: "";
- 				display: block;
- 				height: 100%;
- 				left:0;
- 				position: absolute;
- 				top:0;
- 				transition: 0.5s all ease;
- 				width: 100%;
- 				z-index:1;
- 			} // "edit image"
  		}
- 		&[hasimg=false] { // "select"
-
+ 		&[data-hasimg=false]:before {
+			display: none !important; // "select"
+			padding: 0 !important;
  		}
  	}
+	.editor-media-placeholder.wp-block-swrdlyts-tile {
+		padding-bottom: 100px;
+		padding-top: 100px;
+	}
  }
