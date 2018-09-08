@@ -5,7 +5,7 @@
  * Description: Tile blocks for Gutenberg
  * Author: davidsword
  * Author URI: https://davidsword.ca/
- * Version: 1.0.6
+ * Version: 1.0.7
  * License: GPL3
  * License URI: https://raw.githubusercontent.com/davidsword/sword-layouts/master/LICENSE
  *
