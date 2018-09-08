@@ -1,10 +1,8 @@
-# Sword Layouts
+# Gutenberg Tile Block (Sword Layouts)
 
-Layout blocks for [Gutenberg](https://wordpress.org/plugins/gutenberg/) that help create more interesting and modern WordPress pages.
+Tile Layout block for [Gutenberg](https://wordpress.org/plugins/gutenberg/) that helps create more interesting and modern WordPress pages.
 
 Also see it in [WordPress.org/plugins/](https://wordpress.org/plugins/sword-layouts/).
-
-## Current Layout(s)
 
 #### TILE
 
@@ -23,11 +21,13 @@ The gaps between blocks are only in the Editor for block control reasons. [The f
 
 ### Credits
 
- - 🙏 [@ahmadawais](https://github.com/ahmadawais/create-guten-block) for the create-guten-block foundation
+ - 🙏 [@ahmadawais](https://github.com/ahmadawais/create-guten-block) for the `create-guten-block` foundation
  - 🙏 [@zgordon](https://gutenberg.courses/development/) for the teaching
 
 
-### Road Map
+### @TODO
 
+- [ ] Placeholder text for RichText not prominent enough
+- [ ] Add Contrast checker
 - [ ] Add more Blocks
 - [ ] Add notice for requirement of Gutenberg if not installed
