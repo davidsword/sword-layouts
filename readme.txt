@@ -4,7 +4,7 @@ Donate link:       https://davidsword.ca/🍺/
 Tags:              Gutenberg, Blocks, Layouts, Modern, Page Builder, Design
 Requires at least: 4.9.5
 Tested up to:      4.9.8
-Stable tag:        1.0.7
+Stable tag:        1.0.8
 Requires PHP:      5.6.0
 
 Tile block for Gutenberg that help create more interesting and modern WordPress pages.
@@ -17,17 +17,18 @@ Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that
 * Creates a "magazine" style to your webpage
 * Fully responsive
 
+[youtube https://www.youtube.com/watch?v=NPl8eegbots]
+
 = Please Note =
 
-* 🚀 This is a beta plugin for the beta plugin [Gutenberg](https://wordpress.org/plugins/gutenberg/) - things will be rocky.
-* 🚧 This is a WIP, more layouts will be added and the plugin name will change to "Sword Layouts"
+* 🚀 This is a beta plugin - things will be rocky.
+* 🚧 This is a Work In Progress
 * ⚠️ Please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, WordPress and PHP versions, able-to-replicate instructions).
 
 = Big shouts to =
 
  - 🙏 [@ahmadawais](https://github.com/ahmadawais/create-guten-block) for the create-guten-block foundation
- - 🙏 [@zgordon](https://gutenberg.courses/development/) for the teaching
-
+ - 🙏 [@zgordon](https://gutenberg.courses/development/) for the Gutenberg teaching
 
 ---
 
@@ -65,6 +66,12 @@ Turn "Invert Layout" on.
 2. Tile - within Gutenberg
 
 == Changelog ==
+
+= 1.0.8 =
+* Dec 8, 2018
+* Compatibility for WP 5.0 (better late than never!)
+* README changes, added video
+* fixed Enquing
 
 = 1.0.7 =
 * Sep 8, 2018
