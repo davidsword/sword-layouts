@@ -2,12 +2,13 @@
 Contributors:      davidsword
 Donate link:       https://davidsword.ca/🍺/
 Tags:              Gutenberg, Blocks, Layouts, Modern, Page Builder, Design
-Requires at least: 4.9.5
-Tested up to:      4.9.8
+Requires at least: 5.0.0
+Tested up to:      5.0.0
 Stable tag:        1.0.8
 Requires PHP:      5.6.0
 
 Tile block for Gutenberg that help create more interesting and modern WordPress pages.
+
 
 == Description ==
 
@@ -24,13 +25,13 @@ Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that
 * 🚀 This is a beta plugin - things will be rocky.
 * 🚧 This is a Work In Progress
 * ⚠️ Please [open a support request](https://wordpress.org/support/plugin/sword-layouts) [or add as an issue on Github](https://github.com/davidsword/sword-layouts/issues) before summiting a negative review, *I'm happy to help,* please provide as much information as possible (screen recordings, WordPress and PHP versions, able-to-replicate instructions).
+* 👨🏻‍💻 Please visit [Github](https://github.com/davidsword/sword-layouts/) for development
+* 🤓 If you have any additional requests, please use [the Support tab](https://wordpress.org/support/plugin/sword-layouts).
 
 = Big shouts to =
 
  - 🙏 [@ahmadawais](https://github.com/ahmadawais/create-guten-block) for the create-guten-block foundation
  - 🙏 [@zgordon](https://gutenberg.courses/development/) for the Gutenberg teaching
-
----
 
 
 == Installation ==
@@ -38,6 +39,7 @@ Layout blocks for **[Gutenberg](https://wordpress.org/plugins/gutenberg/)** that
  - from your Plugin browser on your site, or
  - download the plugin and extract the files and upload `sword-layouts` to your `/wp-content/plugins/` directory
  - Activate the plugin through the 'Plugins' menu in WordPress
+
 
 == Frequently Asked Questions ==
 
@@ -64,6 +66,7 @@ Turn "Invert Layout" on.
 
 1. Tile - frontend
 2. Tile - within Gutenberg
+
 
 == Changelog ==
 
@@ -118,25 +121,12 @@ Turn "Invert Layout" on.
 * Feb 17, 2018
 * Initial release
 
+
 == Upgrade Notice ==
 
-= 1.0.4 =
 
-* blue skys
+== TODO ==
 
-= 1.0.1 =
-
-* blue skys
-
-= 1.0.0 =
-
-* blue skys
-
-== Additional Notes ==
-
-* 👨🏻‍💻 Please visit [Github](https://github.com/davidsword/sword-layouts/) for build files and full documentation
-* 🤓 If you have any additional requests into [the Support tab](https://wordpress.org/support/plugin/sword-layouts).
-
-=== @TODO ===
-
- - [] focus on AlignmentToolbar only when in RichText, not the entire block
+- [ ] Add FAQ about "Padding: Top Bottom", as it only applies on mobile and when the text is greater than the images size squared.
+- [ ] Placeholder text for RichText not prominent enough
+- [ ] Add Contrast checker
