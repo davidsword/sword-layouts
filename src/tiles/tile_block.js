@@ -9,7 +9,6 @@
 import './style.scss';
 import './editor.scss';
 import icon from './icon.js';
-import classnames from 'classnames';
 
 const { __ } = wp.i18n;
 const {
@@ -169,7 +168,7 @@ registerBlockType( 'swrdlyts/tile', {
 				</InspectorControls>
 			), (
 				<div
-					className={ classnames( 'alignfull', className ) }
+					className={ `alignfull ${className}` }
 					data-invert={ attributes.invert ? 'true' : 'false' }
 					data-align="full"
 					data-paddingTB={ attributes.paddingTB }
@@ -234,7 +233,7 @@ registerBlockType( 'swrdlyts/tile', {
 							tagname="div"
 							multiline="p"
 							placeholder="...."
-							className={ classnames( 'textBoxContent', textColor ) }
+							className = { `textBoxContent ${textColor}` }
 							style={ {
 								textAlign: attributes.alignment,
 								color: attributes.textColor,
@@ -271,7 +270,7 @@ registerBlockType( 'swrdlyts/tile', {
 				></div>
 				<div className="textBox">
 					<div
-						className={ classnames( 'textBoxContent', textColor ) }
+						className={`textBoxContent ${textColor}`}
 						style={ {
 							textAlign: props.attributes.alignment,
 							color: props.attributes.textColor,
