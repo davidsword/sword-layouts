@@ -1,35 +1,17 @@
 # Gutenberg Tile Block (Sword Layouts)
 
-Tile Layout block for [Gutenberg](https://wordpress.org/plugins/gutenberg/) that helps create more interesting and modern WordPress pages.
+⚡ Tile Layout block for [Gutenberg](https://wordpress.org/gutenberg/)
 
-Also see it in [WordPress.org/plugins/](https://wordpress.org/plugins/sword-layouts/).
+🏠 [WordPress.org/plugins/sword-layouts/](https://wordpress.org/plugins/sword-layouts/).
 
-#### TILE
+📖 Full docs in `/readme.txt`, or above ^
 
-* Stagger small blurbs of text along side beautiful images
-* Creates a "magazine" style to your webpage
-* Fully responsive
+📷 Youtube [video](https://www.youtube.com/watch?v=NPl8eegbots) demo.
+
+🙏 Thanks [@ahmadawais](https://github.com/ahmadawais/create-guten-block) for the `create-guten-block` and [@zgordon](https://gutenberg.courses/development/) for tutorials
+
+🙌 Contributors: please do! Look forward to your PRs!
+
+---
 
 ![](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-2.gif)
-
-The gaps between blocks are only in the Editor for block control reasons. [The front end](https://raw.githubusercontent.com/davidsword/sword-layouts/master/screenshot-1.gif) snugs everything up and creates the tile layout better.
-
-#### ..more on the way
-
-* _this project is in a work in progress!_
-
-
-### Credits
-
- - 🙏 [@ahmadawais](https://github.com/ahmadawais/create-guten-block) for the `create-guten-block` foundation
- - 🙏 [@zgordon](https://gutenberg.courses/development/) for the teaching
-
-
-### @TODO
-
-- [ ] Placeholder Media Upload is bumped down, css issue
-- [ ] Add FAQ about "Padding: Top Bottom", as it only applies on mobile and when the text is greater than the images size squared.
-- [ ] Placeholder text for RichText not prominent enough
-- [ ] Add Contrast checker
-- [ ] Add more Blocks
-- [ ] Add notice for requirement of Gutenberg if not installed

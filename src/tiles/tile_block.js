@@ -9,18 +9,18 @@
 import './style.scss';
 import './editor.scss';
 import icon from './icon.js';
-import classnames from 'classnames';
 
 const { __ } = wp.i18n;
 const {
-	AlignmentToolbar,
 	BlockControls,
 	InspectorControls,
 	MediaUpload,
 	MediaPlaceholder,
 	RichText,
-	ColorPalette,
+	PanelColorSettings,
 	getColorClassName,
+	AlignmentToolbar,
+	BlockAlignmentToolbar,
 } = wp.editor;
 const {
 	registerBlockType,
@@ -30,7 +30,6 @@ const {
 	RangeControl,
 	IconButton,
 	PanelBody,
-	PanelColor,
 	Toolbar,
 } = wp.components;
 
@@ -81,17 +80,20 @@ registerBlockType( 'swrdlyts/tile', {
 		alignment: {
 			type: 'string',
 		},
+		blockalignment: {
+			type: 'string',
+		},
 	},
 	getEditWrapperProps( attributes ) {
 		const moveToolBar = attributes.invert ? 'false' : 'true';
 		return {
-			'data-align': 'full',
+			'data-align': attributes.blockalignment,
 			'data-move-toolbar-right': moveToolBar,
 		};
 	},
-	// ----
-	// EDIT
-	// ----
+	/**
+	 * EDIT BLOCK
+	 */
 	edit( { attributes, setAttributes, className, isSelected } ) {
 		const onChangeContent = value => {
 			setAttributes( { content: value } );
@@ -107,6 +109,9 @@ registerBlockType( 'swrdlyts/tile', {
 		};
 		const onChangeAlignment = value => {
 			setAttributes( { alignment: value } );
+		};
+		const onChangeBlockAlignment = value => {
+			setAttributes( { blockalignment: value } );
 		};
 		const buttonText = ( ! attributes.imgID ) ? 'Select Image' : 'Change Image';
 		const buttonIcon = ( ! attributes.imgID ) ? 'add' : 'edit';
@@ -139,39 +144,40 @@ registerBlockType( 'swrdlyts/tile', {
 							max={ 90 }
 							step={ 2 }
 						/>
-						<PanelColor
+
+						<PanelColorSettings
 							title={ __( 'Background Color' ) }
 							colorValue={ attributes.backgroundColor }
-						>
-							<ColorPalette
-								label={ __( 'Background Color' ) }
-								value={ attributes.backgroundColor }
-								onChange={ value => {
+							initialOpen={ false }
+							colorSettings={ [ {
+								value: attributes.backgroundColor,
+								onChange: ( value ) => {
 									setAttributes( { backgroundColor: value } );
-								}
-								}
-							/>
-						</PanelColor>
-						<PanelColor
+								},
+								label: __( 'Background Color' ),
+							} ] }
+						/>
+
+						<PanelColorSettings
 							title={ __( 'Text Color' ) }
 							colorValue={ attributes.textColor }
-						>
-							<ColorPalette
-								label={ __( 'Text Color' ) }
-								value={ attributes.textColor }
-								onChange={ value => {
+							initialOpen={ false }
+							colorSettings={ [ {
+								value: attributes.textColor,
+								onChange: ( value ) => {
 									setAttributes( { textColor: value } );
-								}
-								}
-							/>
-						</PanelColor>
+								},
+								label: __('Text Color'),
+							} ] }
+						/>
 					</PanelBody>
 				</InspectorControls>
 			), (
 				<div
-					className={ classnames( 'alignfull', className ) }
+					className = {
+						`align${attributes.blockalignment ? attributes.blockalignment : ''} ${className ? className : ''}`
+					}
 					data-invert={ attributes.invert ? 'true' : 'false' }
-					data-align="full"
 					data-paddingTB={ attributes.paddingTB }
 					data-width={ attributes.width }
 					style={ {
@@ -209,6 +215,11 @@ registerBlockType( 'swrdlyts/tile', {
 										value={ attributes.alignment }
 										onChange={ onChangeAlignment }
 									/>
+									<BlockAlignmentToolbar
+										value={ attributes.alignment }
+										onChange={ onChangeBlockAlignment }
+										controls={ [ 'wide', 'full' ] }
+									/>
 									<Toolbar>
 										{
 											attributes.imgID && (
@@ -234,7 +245,9 @@ registerBlockType( 'swrdlyts/tile', {
 							tagname="div"
 							multiline="p"
 							placeholder="...."
-							className={ classnames( 'textBoxContent', textColor ) }
+							className = {
+								`textBoxContent ${textColor ? textColor : ''}`
+							}
 							style={ {
 								textAlign: attributes.alignment,
 								color: attributes.textColor,
@@ -250,13 +263,17 @@ registerBlockType( 'swrdlyts/tile', {
 			),
 		];
 	},
+	/**
+	 * SAVE BLOCK
+	 */
 	save: function( props ) {
 		const textColor = getColorClassName( 'color', props.attributes.textColor );
 		return (
 			<div
-				className={ props.className }
+				className = {
+					`align${props.attributes.blockalignment ? props.attributes.blockalignment : ''} ${props.className ? props.className : ''}`
+				}
 				data-invert={ props.attributes.invert }
-				data-align="full"
 				data-paddingTB={ props.attributes.paddingTB }
 				data-width={ props.attributes.width }
 				style={ {
@@ -271,7 +288,9 @@ registerBlockType( 'swrdlyts/tile', {
 				></div>
 				<div className="textBox">
 					<div
-						className={ classnames( 'textBoxContent', textColor ) }
+						className = {
+							`textBoxContent ${textColor ? textColor : ''}`
+						}
 						style={ {
 							textAlign: props.attributes.alignment,
 							color: props.attributes.textColor,

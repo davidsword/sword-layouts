@@ -11,11 +11,6 @@
 
  .wp-block-swrdlyts-tile {
  	> div.imageBox {
- 		.editor-media-placeholder.wp-block-swrdlyts-tile {
-			
-		}
- 		&[data-hasimg=true] {
- 		}
  		&[data-hasimg=false]:before {
 			display: none !important; // "select"
 			padding: 0 !important;
