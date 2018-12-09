@@ -4,8 +4,8 @@
 .wp-block-swrdlyts-tile {
 	display: flex;
 	margin: 0 auto !important;
-	max-width: 100% !important;
-	width: 100% !important;
+	// max-width: 100% !important; // let the theme decide.
+	// width: 100% !important; // let the theme decide.
 	> div {
 		flex:1;
 	}
@@ -53,16 +53,13 @@
 @media screen and (max-width: 800px) {
 	.wp-block-swrdlyts-tile {
 		flex-direction: column;
-		> div.imageBox {
-			
-		}
 	}
 }
 
 @media screen and (max-width: 500px) {
 	.wp-block-swrdlyts-tile {
 		> div.imageBox {
-			
+
 		}
 		> div.textBox {
 			margin: 10vh 0;

@@ -12,7 +12,6 @@ import icon from './icon.js';
 
 const { __ } = wp.i18n;
 const {
-	AlignmentToolbar,
 	BlockControls,
 	InspectorControls,
 	MediaUpload,
@@ -20,6 +19,8 @@ const {
 	RichText,
 	PanelColorSettings,
 	getColorClassName,
+	AlignmentToolbar,
+	BlockAlignmentToolbar,
 } = wp.editor;
 const {
 	registerBlockType,
@@ -79,17 +80,20 @@ registerBlockType( 'swrdlyts/tile', {
 		alignment: {
 			type: 'string',
 		},
+		blockalignment: {
+			type: 'string',
+		},
 	},
 	getEditWrapperProps( attributes ) {
 		const moveToolBar = attributes.invert ? 'false' : 'true';
 		return {
-			'data-align': 'full',
+			'data-align': attributes.blockalignment,
 			'data-move-toolbar-right': moveToolBar,
 		};
 	},
-	// ----
-	// EDIT
-	// ----
+	/**
+	 * EDIT BLOCK
+	 */
 	edit( { attributes, setAttributes, className, isSelected } ) {
 		const onChangeContent = value => {
 			setAttributes( { content: value } );
@@ -105,6 +109,9 @@ registerBlockType( 'swrdlyts/tile', {
 		};
 		const onChangeAlignment = value => {
 			setAttributes( { alignment: value } );
+		};
+		const onChangeBlockAlignment = value => {
+			setAttributes( { blockalignment: value } );
 		};
 		const buttonText = ( ! attributes.imgID ) ? 'Select Image' : 'Change Image';
 		const buttonIcon = ( ! attributes.imgID ) ? 'add' : 'edit';
@@ -167,9 +174,10 @@ registerBlockType( 'swrdlyts/tile', {
 				</InspectorControls>
 			), (
 				<div
-					className={ `alignfull ${className}` }
+					className = {
+						`align${attributes.blockalignment ? attributes.blockalignment : ''} ${className ? className : ''}`
+					}
 					data-invert={ attributes.invert ? 'true' : 'false' }
-					data-align="full"
 					data-paddingTB={ attributes.paddingTB }
 					data-width={ attributes.width }
 					style={ {
@@ -206,6 +214,11 @@ registerBlockType( 'swrdlyts/tile', {
 									<AlignmentToolbar
 										value={ attributes.alignment }
 										onChange={ onChangeAlignment }
+									/>
+									<BlockAlignmentToolbar
+										value={ attributes.alignment }
+										onChange={ onChangeBlockAlignment }
+										controls={ [ 'wide', 'full' ] }
 									/>
 									<Toolbar>
 										{
@@ -250,13 +263,17 @@ registerBlockType( 'swrdlyts/tile', {
 			),
 		];
 	},
+	/**
+	 * SAVE BLOCK
+	 */
 	save: function( props ) {
 		const textColor = getColorClassName( 'color', props.attributes.textColor );
 		return (
 			<div
-				className={ props.className }
+				className = {
+					`align${props.attributes.blockalignment ? props.attributes.blockalignment : ''} ${props.className ? props.className : ''}`
+				}
 				data-invert={ props.attributes.invert }
-				data-align="full"
 				data-paddingTB={ props.attributes.paddingTB }
 				data-width={ props.attributes.width }
 				style={ {
