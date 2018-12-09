@@ -18,7 +18,7 @@ const {
 	MediaUpload,
 	MediaPlaceholder,
 	RichText,
-	ColorPalette,
+	PanelColorSettings,
 	getColorClassName,
 } = wp.editor;
 const {
@@ -29,7 +29,6 @@ const {
 	RangeControl,
 	IconButton,
 	PanelBody,
-	PanelColor,
 	Toolbar,
 } = wp.components;
 
@@ -138,32 +137,32 @@ registerBlockType( 'swrdlyts/tile', {
 							max={ 90 }
 							step={ 2 }
 						/>
-						<PanelColor
+
+						<PanelColorSettings
 							title={ __( 'Background Color' ) }
 							colorValue={ attributes.backgroundColor }
-						>
-							<ColorPalette
-								label={ __( 'Background Color' ) }
-								value={ attributes.backgroundColor }
-								onChange={ value => {
+							initialOpen={ false }
+							colorSettings={ [ {
+								value: attributes.backgroundColor,
+								onChange: ( value ) => {
 									setAttributes( { backgroundColor: value } );
-								}
-								}
-							/>
-						</PanelColor>
-						<PanelColor
+								},
+								label: __( 'Background Color' ),
+							} ] }
+						/>
+
+						<PanelColorSettings
 							title={ __( 'Text Color' ) }
 							colorValue={ attributes.textColor }
-						>
-							<ColorPalette
-								label={ __( 'Text Color' ) }
-								value={ attributes.textColor }
-								onChange={ value => {
+							initialOpen={ false }
+							colorSettings={ [ {
+								value: attributes.textColor,
+								onChange: ( value ) => {
 									setAttributes( { textColor: value } );
-								}
-								}
-							/>
-						</PanelColor>
+								},
+								label: __('Text Color'),
+							} ] }
+						/>
 					</PanelBody>
 				</InspectorControls>
 			), (
@@ -233,7 +232,9 @@ registerBlockType( 'swrdlyts/tile', {
 							tagname="div"
 							multiline="p"
 							placeholder="...."
-							className = { `textBoxContent ${textColor}` }
+							className = {
+								`textBoxContent ${textColor ? textColor : ''}`
+							}
 							style={ {
 								textAlign: attributes.alignment,
 								color: attributes.textColor,
@@ -270,7 +271,9 @@ registerBlockType( 'swrdlyts/tile', {
 				></div>
 				<div className="textBox">
 					<div
-						className={`textBoxContent ${textColor}`}
+						className = {
+							`textBoxContent ${textColor ? textColor : ''}`
+						}
 						style={ {
 							textAlign: props.attributes.alignment,
 							color: props.attributes.textColor,
