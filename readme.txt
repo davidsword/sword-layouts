@@ -74,7 +74,10 @@ Turn "Invert Layout" on.
 * Dec 8, 2018
 * Compatibility for WP 5.0 (better late than never!)
 * README changes, added video
-* fixed Enquing
+* fixed Enqueue
+* remove use of npm `classnames`
+* `alignfull` now set with BlockAlignmentToolbar instead of being hardcoded
+* replaced ColorPalette and PanelColor with PanelColorSettings
 
 = 1.0.7 =
 * Sep 8, 2018
@@ -124,10 +127,13 @@ Turn "Invert Layout" on.
 
 == Upgrade Notice ==
 
+= 1.0.8 =
+* Dec 8, 2018
+* Blocks built before this release will be broken. See JS console for instructions on how to edit the HTML to fix, but better off just rebuilding the blocks. Moving forward this won't happen.
 
 == TODO ==
 
-- [x] ~remove use of `classnames`~
 - [ ] Add FAQ about "Padding: Top Bottom", as it only applies on mobile and when the text is greater than the images size squared.
 - [ ] Placeholder text for RichText not prominent enough
 - [ ] Add Contrast checker
+- [ ] Move InspectorControls to own component
