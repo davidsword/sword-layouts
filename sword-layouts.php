@@ -56,7 +56,7 @@ function sword_layouts_version() {
 	if ( WP_DEBUG || SCRIPT_DEBUG ) {
 		return time(); // Bust that cache!
 	} else {
-		$plugin_data = get_plugin_data( __FILE__ );
+		$plugin_data = get_file_data( __FILE__, [] );
 		return $plugin_data['Version'];
 	}
 }
